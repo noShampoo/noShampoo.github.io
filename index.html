@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/11/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/14/spring%E7%B3%BB%E5%88%97-IOC%E5%AE%B9%E5%99%A8%E7%9A%84%E7%94%9F%E5%91%BD%E8%BF%9B%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="noShampoo">
@@ -272,7 +272,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/02/11/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2020/02/14/spring%E7%B3%BB%E5%88%97-IOC%E5%AE%B9%E5%99%A8%E7%9A%84%E7%94%9F%E5%91%BD%E8%BF%9B%E7%A8%8B/" itemprop="url">spring系列-IOC的部分源码解析</a></h1>
         
 
         <div class="post-meta">
@@ -284,7 +284,136 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-11T22:09:20+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-14T01:08:29+08:00">
+                2020-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="我们上篇文章说到过spring的其中一种思想，叫做控制反转。众所周知，spring有两大思想：控制反转和面向切面编程。那么我们继续来剖析控制反转。"><a href="#我们上篇文章说到过spring的其中一种思想，叫做控制反转。众所周知，spring有两大思想：控制反转和面向切面编程。那么我们继续来剖析控制反转。" class="headerlink" title="我们上篇文章说到过spring的其中一种思想，叫做控制反转。众所周知，spring有两大思想：控制反转和面向切面编程。那么我们继续来剖析控制反转。"></a>我们上篇文章说到过spring的其中一种思想，叫做控制反转。众所周知，spring有两大思想：控制反转和面向切面编程。那么我们继续来剖析控制反转。</h3><h2 id="1-对IOC容器的阐述"><a href="#1-对IOC容器的阐述" class="headerlink" title="1.对IOC容器的阐述"></a>1.对IOC容器的阐述</h2><p>我们讲过控制反转就是通过描述并通过第三方去生产获取特定对象的方法。而实现这一过程的就是依赖注入。通过解决spring容器中对应的资源的关系，对其进行相应的负责和生产。那么，我们知道了IOC的作用，知道其是为管理Bean而生，那么我们就来看一些对相应相关高频的源码进行分析。</p>
+<h2 id="2-spring-IOC容器的设计"><a href="#2-spring-IOC容器的设计" class="headerlink" title="2.spring IOC容器的设计"></a>2.spring IOC容器的设计</h2><p>IOC容器的设计，我们从源码上看，主要是基于BeanFactory和ApplicationContext两个接口。而ApplicationContext又是BeanFactory的一个子接口。那接下来我们看一下BeanFactory中的接口。这里因为spring源码中包含大量注释，所以我们采用实现重写的方法来了解其所有方法。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/14/spring%E7%B3%BB%E5%88%97-IOC%E5%AE%B9%E5%99%A8%E7%9A%84%E7%94%9F%E5%91%BD%E8%BF%9B%E7%A8%8B/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/11/spring%E7%B3%BB%E5%88%97-%E6%8E%A7%E5%88%B6%E5%8F%8D%E8%BD%AC%E6%80%9D%E6%83%B3-IOC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="noShampoo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/auth.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="noShampoo's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/11/spring%E7%B3%BB%E5%88%97-%E6%8E%A7%E5%88%B6%E5%8F%8D%E8%BD%AC%E6%80%9D%E6%83%B3-IOC/" itemprop="url">spring的控制反转思想(IOC)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-11T23:34:05+08:00">
                 2020-02-11
               </time>
             
@@ -323,22 +452,15 @@
 
       
         
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          <h2 id="1-spring的概述"><a href="#1-spring的概述" class="headerlink" title="1.spring的概述"></a>1.spring的概述</h2><h5 id="相信很多初学框架者都会问什么是spring？spring能干什么？那么这篇文章足以带"><a href="#相信很多初学框架者都会问什么是spring？spring能干什么？那么这篇文章足以带" class="headerlink" title="相信很多初学框架者都会问什么是spring？spring能干什么？那么这篇文章足以带"></a>相信很多初学框架者都会问什么是spring？spring能干什么？那么这篇文章足以带</h5><p>你解决这两个问题。spring就是一个大的容器。它的理念就是IOC(控制反转)和AOP(面向切<br>面编程)。</p>
+<h2 id="2-我们首先先看一个例子："><a href="#2-我们首先先看一个例子：" class="headerlink" title="2.我们首先先看一个例子："></a>2.我们首先先看一个例子：</h2><p>如果你现在想喝一杯果汁，但是现在由于新型冠状病毒传播的原因，附近很多地方无法买到<br>果汁，而且由于疫情期间小区的管理，你也无法到距离小区很远的蜜雪冰城去买果汁。所以<br>我们首先想到的办法就是通过榨汁机和鲜水果来<strong>主动创建</strong>一杯果汁。那么这一过程我们<br>叫做主动行为。<br><br>那好，现在是同一个问题，在政府、医务人员和全国民众的团结一人、共同抗疫的坚持下，<br>疫情慢慢消失。蜜雪冰城等可以买到果汁的店铺陆续开门，那么你此时便会订一杯果汁上门<br>饮用。由店家生产果汁，你只需要告诉他们你需要什么从而<strong>被动获得</strong>果汁。那么这一行</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/11/spring%E7%B3%BB%E5%88%97-%E6%8E%A7%E5%88%B6%E5%8F%8D%E8%BD%AC%E6%80%9D%E6%83%B3-IOC/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -426,7 +548,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -434,6 +556,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
